@@ -116,7 +116,7 @@ include 'templates/header.html';
             We offer friendly, professional therapy to help you 
             feel supported and understood.
             Whether you are dealing with stress, anxiety, 
-            depression, or just need someone to talk to, 
+            depression or just need someone to talk to, 
             our licensed therapists are here for you. 
             We provide personalized sessions to meet your 
             needs, making it easy to take care of your mental 

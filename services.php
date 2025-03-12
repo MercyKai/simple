@@ -135,14 +135,14 @@ include 'templates/header.html';
 
         <div class="information">
             <p class="page-title">Ready to Start Your journey?</p>
-            <h2 class="site-motto">Book a Therapy Session Today!</h2>
+            <h2 class="site-motto">Contact Us Today!</h2>
             <p class="page-info">
                 Take the first step towards healing and self-growth with 
                 our expert therapists. Whether you need help 
                 with stress, anxiety, relationships or personal growth, 
                 we provide a safe space for conversations and change.
             </p>
-            <a href="login.php" class="btn">SCHEDULE NOW</a>
+            <a href="login.php" class="btn">GET STARTED</a>
         </div>   
     </section>
 </section>

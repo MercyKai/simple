@@ -21,9 +21,9 @@
           from the comfort of your home. 
           Whether you need a listening ear, 
           expert guidance or tools to manage stress,
-          we have you covered. With live video sessions, 
-          therapy feels easier and more personal. 
-          We provide real support when you need it.
+          we have you covered. With sessions that make
+          therapy feel easier and more personal. 
+          We provide you with support when you need it.
           Ready to start your journey?
         </p>            
       </div>
@@ -34,7 +34,7 @@
     session_start();
     if (isset($_SESSION['error'])) {
         echo "<p class='error-message'>" . $_SESSION['error'] . "</p>";
-        unset($_SESSION['error']);
+        unset($_SESSION['error']);        
     }
     ?>
 

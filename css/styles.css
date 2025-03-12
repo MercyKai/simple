@@ -25,11 +25,10 @@ html, body {
 }
 
 .error-message {
-    color: rgb(255, 0, 0);
+    background-color: red;
+    color: white;
     text-align: center;
-    background: #a29dec;
     padding: 5px;
-    border: 1px solid rgb(255, 0, 0);
     width: 80%;
     margin: 10px auto;
     border-radius: 5px;

@@ -14,8 +14,8 @@ include 'templates/header.html';
             <h1 class="site-motto">Meet Our Experts</h1>
         </div>
 
-<section class="main-container">             
-    <div class="information" id="#emily">
+<section class="main-container" id="emily">             
+    <div class="information">
         <p class="page-title">Dr. Emily Carter</p>
         <h2 class="site-motto">Psychologist</h2>
         <p class="page-info">
@@ -31,8 +31,8 @@ include 'templates/header.html';
         </div>
 </section>
 
-<section class="main-container">             
-    <div class="information" id="#michael">
+<section class="main-container" id="michael">             
+    <div class="information">
         <p class="page-title">Michael Johnson</p>
         <h2 class="site-motto">Clinical social worker</h2>
         <p class="page-info">
@@ -48,7 +48,7 @@ include 'templates/header.html';
         </div>
 </section>
 
-<section class="main-container" id="#sarah">             
+<section class="main-container" id="sarah">             
     <div class="information" >
         <p class="page-title">Dr. Sarah Lee</p>
         <h2 class="site-motto">National certified counselor</h2>
@@ -108,14 +108,14 @@ include 'templates/header.html';
 
         <div class="information">
             <p class="page-title">Ready to Start Your journey?</p>
-            <h2 class="site-motto">Book a Therapy Session Today!</h2>
+            <h2 class="site-motto">Contact Us Today!</h2>
             <p class="page-info">
                 Take the first step towards healing and self-growth with 
                 our expert therapists. Whether you need help 
                 with stress, anxiety, relationships or personal growth, 
                 we provide a safe space for conversations and change.
             </p>
-            <a href="login.php" class="btn">SCHEDULE NOW</a>
+            <a href="login.php" class="btn">GET STARTED</a>
         </div>   
     </section>
 </section>
