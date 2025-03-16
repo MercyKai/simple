@@ -47,7 +47,7 @@ include 'templates/header.html';
                 <div class="card-content">
                     <h2 class="card-title">Couples Counseling</h2>
                     <p class="card-description">Strengthen your relationship.</p>
-                    <a href="services.php#couple" class="btn">Learn More</a>
+                    <a href="services.php#couples" class="btn">Learn More</a>
                 </div>
             </div>
 

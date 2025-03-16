@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="../../js/script.js"></script>
+</head>
+
+<body class="homepage">
+
+<section class="content">
+    <div class="heading">
+        <p class="page-title">Frame</p>
+            <h1 class="site-motto">Emotion Recognition</h1>
+    </div>
+
+    <div class="video-container" style="justify-content: center;display: flex;margin-bottom: 20px;">
+        <!--Get the video url to display it-->
+        <img src="{{ url_for('video')}}">
+            
+    </div>
+</section>
+
+<div class="footer-bottom">
+    &copy; 2025 CalmSpace. All rights reserved.
+</div>
+
+</body>
+</html>

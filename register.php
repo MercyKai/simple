@@ -1,23 +1,19 @@
 <?php
-include_once 'connect.php';
+include 'connect.php';
 session_start();
-
 // Check if the sign-up button is clicked
 if (isset($_POST['signUp'])) {
     // Collect form data
-    $firstName = $_POST['fName'];
-    $lastName = $_POST['lName'];
-    $email = $_POST['email'];
-    $password = md5($_POST['password']);
-    $usertype = $_POST['usertype'];
-
+    $firstName=$_POST['fName'];
+    $lastName=$_POST['lName'];
+    $email=$_POST['email'];
+    $password=md5($_POST['password']);
+    $usertype=$_POST['usertype'];
     // Check if the email already exists in the database
-    $query="SELECT * FROM users WHERE email='$email'";
+    $query="SELECT * From users Where email='$email'";
     $resultUser=mysqli_query($conn, $query);
-
-    $query = "SELECT * FROM therapists WHERE email='$email'";
-    $resultTherapist = mysqli_query($conn, $query);
-
+    $query="SELECT * From therapists Where email='$email'";
+    $resultTherapist=mysqli_query($conn, $query);
     // If the email already exists, display an error message
     if (mysqli_num_rows($resultUser)>0 || mysqli_num_rows($resultTherapist)>0) {
         $_SESSION['error']="Email Already Exists!";
@@ -39,7 +35,6 @@ if (isset($_POST['signUp'])) {
                 header("Location: login.php");
                 exit();
         }
-
         // Execute the query
         $result=mysqli_query($conn, $query);
         if ($result) {
@@ -52,25 +47,16 @@ if (isset($_POST['signUp'])) {
         }
     }
 }
-
 // Check if the sign-in button is clicked
 if (isset($_POST['signIn'])) {
     // Collect form data
     $email=$_POST['email'];
     $password=md5($_POST['password']);
-
     // Check if the email and password match a user in the database
-    $query="SELECT * FROM users WHERE email='$email' AND password='$password'";    
-    $resultUser = mysqli_query($conn, $query);
-
-    $query="SELECT * FROM therapists WHERE email='$email' AND password='$password'";
+    $query="SELECT * From users Where email='$email' AND password='$password'";    
+    $resultUser=mysqli_query($conn, $query);
+    $query="SELECT * From therapists Where email='$email' AND password='$password'";
     $resultTherapist=mysqli_query($conn, $query);
-
-    /* 
-    $query = "SELECT * FROM admins WHERE email='$email' AND password='$password'";
-    $resultAdmin = mysqli_query($conn, $query);
-    */
-
     // If the user exists, redirect to the user dashboard
     if (mysqli_num_rows($resultUser)>0) {
         $row=mysqli_fetch_assoc($resultUser);
@@ -87,15 +73,6 @@ if (isset($_POST['signIn'])) {
         header("Location: therapist/therapist_dashboard.php");
         exit();
     } 
-    /*
-    elseif (mysqli_num_rows($resultAdmin) > 0) {
-        $row = mysqli_fetch_assoc($resultAdmin);
-        $_SESSION['email'] = $row['email'];
-        $_SESSION['usertype'] = 'admin';
-        header("Location: admin/admin_dashboard.php");
-        exit();
-    }
-    */
     // If credentials are incorrect, display an error message
     else {
         $_SESSION['error']="Incorrect Email or Password!";
@@ -103,22 +80,4 @@ if (isset($_POST['signIn'])) {
         exit();
     }
 }
-
-// Creating admin account (if none exists)
-/*
-$query = "SELECT * FROM admins";
-$resultAdmin = mysqli_query($conn, $query);
-
-if (mysqli_num_rows($resultAdmin) === 0) {
-    $firstName = 'Calmspace';
-    $lastName = 'Admin';
-    $email = 'admin@calmspace.com';
-    $password = md5('calmspaceAdmin@123');
-    $query = "INSERT INTO admins (firstName, lastName, email, password) 
-              VALUES ('$firstName', '$lastName', '$email', '$password')";
-    if (!mysqli_query($conn, $query)) {
-        echo "Error creating admin account: " . mysqli_error($conn);
-    }
-}
-*/
 ?>

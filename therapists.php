@@ -11,7 +11,7 @@ include 'templates/header.html';
 <section class="content">
     <div class="heading">
         <p class="page-title">Our Therapists</p>
-            <h1 class="site-motto">Meet Our Experts</h1>
+            <h1 class="site-motto">Meet Some of Our Experts</h1>
         </div>
 
 <section class="main-container" id="emily">             
