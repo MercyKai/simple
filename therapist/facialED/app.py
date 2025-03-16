@@ -4,7 +4,7 @@ from camera import Video
 
 app = Flask(__name__)
 #Define the main route
-@app.route('/',endpoint='index')
+@app.route('/')
 def main():
     return render_template('index.html')
 #The camrea generator function

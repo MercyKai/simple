@@ -12,7 +12,7 @@ include 'header.html';
     </div>
     <section class ="content">
     <div style="text-align:center;">
-        <img src="" width="640" height="480">
+        <img src="http://localhost/video" width="640" height="480">
     </div>
                     
     </section>
